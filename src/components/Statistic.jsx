@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 export default function Statistics({
   good,
   neutral,
@@ -31,6 +32,7 @@ export default function Statistics({
       </div>
     );
   } else {
+    Notiflix.Notify.info('There is no feedback');
     return (
       <div key="feedback__stats" className="feedback__stats">
         <p>not feedback given</p>
