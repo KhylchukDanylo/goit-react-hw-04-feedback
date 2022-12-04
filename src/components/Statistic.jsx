@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import Notiflix from 'notiflix';
 export default function Statistics({
   good,
@@ -40,3 +42,10 @@ export default function Statistics({
     );
   }
 }
+Statistics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
+};
