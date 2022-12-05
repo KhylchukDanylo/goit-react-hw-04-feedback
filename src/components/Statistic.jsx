@@ -27,7 +27,7 @@ export default function Statistics({
           </li>
           <li className="feedback__stats--item">
             <p className="feedback__stats--stat">
-              Positive feedback: {positivePercentage}
+              Positive feedback: {positivePercentage}%
             </p>
           </li>
         </ul>

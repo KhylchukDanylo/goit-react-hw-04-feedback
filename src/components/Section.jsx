@@ -2,6 +2,7 @@ import React from 'react';
 import Statistics from './Statistic';
 import FeedbackOptions from './FeedbackOptions';
 import './Feedback.modyle.css';
+import { getValue } from '@testing-library/user-event/dist/utils';
 
 class Section extends React.Component {
   state = {
@@ -18,26 +19,16 @@ class Section extends React.Component {
     if (Number.isNaN(positive)) {
       return 0;
     }
-    return `${positive}%`;
+    return positive;
   }
-  addGood = () => {
+
+  onLeaveFeedback = value => {
+    const nameStat = value.toLowerCase();
     this.setState(prevState => {
+      console.log();
+
       return {
-        good: prevState.good + 1,
-      };
-    });
-  };
-  addBad = () => {
-    this.setState(prevState => {
-      return {
-        bad: prevState.bad + 1,
-      };
-    });
-  };
-  addNeutral = () => {
-    this.setState(prevState => {
-      return {
-        neutral: prevState.neutral + 1,
+        [nameStat]: prevState[nameStat] + 1,
       };
     });
   };
@@ -46,9 +37,8 @@ class Section extends React.Component {
       <div>
         <FeedbackOptions
           key="optionsFeeb"
-          onAddGood={this.addGood}
-          onAddNeutral={this.addNeutral}
-          onAddBad={this.addBad}
+          onLeaveFeedback={this.onLeaveFeedback}
+          options={['good', 'neutral', 'bad']}
         />
         <Statistics
           key="statistics"
