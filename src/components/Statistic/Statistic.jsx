@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-
+import './Statistic.modyle.css';
 import Notiflix from 'notiflix';
 export default function Statistics({
   good,

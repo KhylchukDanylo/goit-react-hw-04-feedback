@@ -1,10 +1,7 @@
 .feedback {
   margin-left: 30px;
 }
-.feedback__btn--add {
-}
-.feedback__btn--title {
-}
+
 .feedback__btn--list {
   list-style-type: none;
   display: flex;
@@ -34,23 +31,4 @@
   color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.feedback__stats {
-  margin-left: 30px;
-}
-.feedback__stats--title {
-}
-.feedback__stats--list {
-  list-style-type: none;
-}
-.feedback__stats--item {
-  margin-bottom: 10px;
-}
-.feedback__stats--stat {
-  font-weight: bold;
-  margin: 0;
-}
-.feedback__stats--item:last-of-type {
-  margin-bottom: 0;
 }

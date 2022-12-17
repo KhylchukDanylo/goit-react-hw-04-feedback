@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import './FeedbackOptions.modyle.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
